@@ -1,7 +1,6 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-# supervisor: Alan Tse, Dept. of Marketing, CUHK Business School (cbtse@cuhk.edu.hk)
-# Author: Tiger Li, Dept. of Information Engineering, CUHK (tigerlicuhk@gmail.com)
+# Author: Tiger Li
 
 import os
 import yaml

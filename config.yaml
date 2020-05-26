@@ -1,0 +1,52 @@
+ENV:
+  OUTPUT_DIR: raw_twitter_data
+  CSV_PREFIX: covid-hashtag-
+  CSV_POSTFIX: .csv
+AUTH:
+  consumer_key: ##HIDDEN AREA##
+  consumer_secret: ##HIDDEN AREA##
+WAIT_RATE:
+  wait_on_rate_limit: True
+  wait_on_rate_limit_notify: True
+SEARCH:
+  # Please refer to Tweepy.API.search method for parameter settings
+  q: \#COVID2019
+  lang: en
+  result_type: recent
+  count: 100
+  tweet_mode: extended
+  include_entities: False
+TWEET_ATTR:
+  - created_at
+  - id
+  - user
+  #- text
+  - full_text
+  #- retweet_count
+  - source
+  #- truncated
+  #- coordinates
+  #- place
+USER_ATTR:
+  - id
+  - name
+  - screen_name
+  - location
+DF_COL_ORDER:
+  - created_at
+  - id
+  - user_id
+  - name
+  - screen_name
+  #- text
+  - full_text
+  #- retweet_count
+  #- coordinates
+  #- place
+  - location
+  - source
+  #- truncated
+DROP_ARGS:
+  subset: id
+  keep: last
+  inplace: True
